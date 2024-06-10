@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MMMU</title>
+  <title>SIUO</title>
     <style>
         .hidden {
             display: none;
@@ -11,10 +11,10 @@
   <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="description"
-        content="A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI">
-  <meta name="keywords" content="MMMU, LMM, LMM Evaluation, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
+        content="Cross-Modality Safety Alignment">
+  <meta name="keywords" content="Cross-Modality, Safety, Alignment, Large Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI</title>
+  <title> SIUO: Cross-Modality Safety Alignment/title>
 
   <link rel="icon" href="./static/images/mmmu_icon2.png">
 
@@ -41,7 +41,7 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -75,7 +75,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -94,22 +94,23 @@
           </h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://xiangyue9607.github.io/" style="text-decoration: none; color: inherit;">Xiang Yue*<sup style="color:#6fbf73;">†,1</sup></a>,
-            </span>
-            <span class="author-block">
-              <a href="https://yuanshengni.github.io/" style="text-decoration: none; color: inherit;">Yuansheng Ni*<sup style="color:#ffac33;">2</sup></a>
+              <a href="https://sinwang20.github.io/" style="text-decoration: none; color: inherit;">Siyin Wang<sup style="color:#ffac33;">1</sup></a>
               ,
             </span>
             <span class="author-block">
-              <a href="https://drogozhang.github.io/" style="text-decoration: none; color: inherit;">Kai Zhang*<sup style="color:#ed4b82;">3</sup></a>
+              <a href="https://sinwang20.github.io/" style="text-decoration: none; color: inherit;">Xingsong Ye<sup style="color:#ffac33;">1</sup></a>
               ,
             </span>
-            <span class="author-block">Tianyu Zheng*<sup style="color:#007bff;">4</sup>,</span><br>
-            <span class="author-block">Ruoqi Liu<sup style="color:#ed4b82;">3</sup>,</span>
-            <span class="author-block">Ge Zhang<sup style="color:#ffac33;">2</sup>,</span>
-            <span class="author-block">Samuel Stevens<sup style="color:#ed4b82;">3</sup>,</span>
-            <span class="author-block">Dongfu Jiang<sup style="color:#ffac33;">2</sup>,</span>
-            <span class="author-block">Weiming Ren<sup style="color:#ffac33;">2</sup>,</span>
+            <span class="author-block">
+              <a href="https://sinwang20.github.io/" style="text-decoration: none; color: inherit;">Qinyuan Cheng<sup style="color:#ffac33;">1</sup></a>
+              ,
+            </span>
+            <span class="author-block">Junwen Duan<sup style="color:#ffac33;">1</sup>,</span><br>
+            <span class="author-block">Shimin Li<sup style="color:#ffac33;">1</sup>,</span>
+            <!-- <span class="author-block">Jinlan Fu<sup style="color:#ed4b82;">2</sup>,</span>
+            <span class="author-block">Xipeng Qiu<sup style="color:#ffac33;">1</sup>,</span>
+            <span class="author-block">Xuanjing Huang<sup style="color:#ffac33;">1/sup>,</span> -->
+            <!-- <span class="author-block">Weiming Ren<sup style="color:#ffac33;">2</sup>,</span>
             <span class="author-block">Yuxuan Sun<sup style="color:#007bff;">4</sup>,</span>
             <span class="author-block">Cong Wei<sup style="color:#ffac33;">2</sup>,</span>
             <span class="author-block">Botao Yu<sup style="color:#ed4b82;">3</sup>,</span>
@@ -119,39 +120,43 @@
             <span class="author-block">Boyuan Zheng<sup style="color:#ed4b82;">3</sup>,</span>
             <span class="author-block">Zhenzhu Yang<sup style="color:#007bff;">4</sup>,</span>
             <span class="author-block">Yibo Liu<sup style="color:#ed4b82;">6</sup>,</span>
-            <span class="author-block">Wenhao Huang<sup style="color:#007bff;">4</sup>,</span><br>
+            <span class="author-block">Wenhao Huang<sup style="color:#007bff;">4</sup>,</span><br> -->
             <span class="author-block">
-              <a href="https://web.cse.ohio-state.edu/~sun.397/" style="text-decoration: none; color: inherit;">Huan Sun*<sup style="color:#ed4b82;">3</sup></a>
+              <a href="https://jinlanfu.github.io/" style="text-decoration: none; color: inherit;">Jinlan Fu<sup style="color:#ed4b82;">2</sup></a>
+              ,
+          </span>
+            <span class="author-block">
+              <a href="https://xpqiu.github.io/en.html" style="text-decoration: none; color: inherit;">Xipeng Qiu<sup style="color:#ffac33;">†,1</sup></a>
               ,
           </span>
           <span class="author-block">
-              <a href="https://ysu1989.github.io/" style="text-decoration: none; color: inherit;">Yu Su*<sup style="color:#ed4b82;">†,3</sup></a>
+              <a href="https://xuanjing-huang.github.io/" style="text-decoration: none; color: inherit;">Xuanjing Huang<sup style="color:#ffac33;">1</sup></a>
               ,
           </span>
-          <span class="author-block">
+          <!-- <span class="author-block">
               <a href="https://wenhuchen.github.io/" style="text-decoration: none; color: inherit;">Wenhu Chen*<sup style="color:#ffac33;">†,2</sup></a>
-          </span>
+          </span> -->
           </div>
           
           <br>
           
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup style="color:#6fbf73;">1</sup>IN.AI Research,</span>
-            <span class="author-block"><sup style="color:#ffac33;">2</sup>University of Waterloo,</span>
-            <span class="author-block"><sup style="color:#ed4b82;">3</sup>The Ohio State University,</span>
-            <span class="author-block"><sup style="color:#007bff;">4</sup>Independent,</span></br>
+            <!-- <span class="author-block"><sup style="color:#6fbf73;">1</sup>IN.AI Research,</span> -->
+            <span class="author-block"><sup style="color:#ffac33;">1</sup>Fudan University,</span>
+            <span class="author-block"><sup style="color:#ed4b82;">2</sup>National University of Singapore,</span>
+            <!-- <span class="author-block"><sup style="color:#007bff;">4</sup>Independent,</span></br>
             <span class="author-block"><sup style="color:#ffac33;">5</sup>Carnegie Mellon University,</span>
             <span class="author-block"><sup style="color:#ed4b82;">6</sup>University of Victoria,</span>
-            <span class="author-block"><sup style="color:#9b51e0;">7</sup>Princeton University</span>
+            <span class="author-block"><sup style="color:#9b51e0;">7</sup>Princeton University</span> -->
           </div>
 
           <br>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">*Core Contributors</span><br>
-            <span class="author-block">†Corresponding to:</span>
-            <span class="author-block"><a href="mailto:xiangyue.work@gmail.com">xiangyue.work@gmail.com</a>,</span>
+            <!-- <span class="author-block">*Core Contributors</span><br> -->
+            <span class="author-block">†Corresponding Author</span>
+            <!-- <span class="author-block"><a href="mailto:xiangyue.work@gmail.com">xiangyue.work@gmail.com</a>,</span>
             <span class="author-block"><a href="mailto:su.809@osu.edu">su.809@osu.edu</a>,</span>
-            <span class="author-block"><a href="mailto:wenhuchen@uwaterloo.ca">wenhuchen@uwaterloo.ca</a></span>
+            <span class="author-block"><a href="mailto:wenhuchen@uwaterloo.ca">wenhuchen@uwaterloo.ca</a></span> -->
           </div>
           
 
