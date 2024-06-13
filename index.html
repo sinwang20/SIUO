@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> SIUO: Cross-Modality Safety Alignment</title>
 
-  <link rel="icon" href="./static/images/mmmu_icon2.png">
+  <link rel="icon" href="./static/images/siuo_icon.png">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -84,7 +84,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
-            <img src="static/images/mmmu_icon2.png" style="width:1em;vertical-align: middle" alt="Logo"/> 
+            <img src="static/images/siuo_icon.png" style="width:1em;vertical-align: middle" alt="Logo"/> 
             <span class="mmmu" style="vertical-align: middle">SIUO</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
@@ -102,7 +102,7 @@
               ,
             </span>
             <span class="author-block">
-              <a href="https://sinwang20.github.io/" style="text-decoration: none; color: inherit;">Qinyuan Cheng<sup style="color:#ffac33;">1</sup></a>
+              <a href="https://scholar.google.com/citations?user=nu_iPXAAAAAJ&hl=en" style="text-decoration: none; color: inherit;">Qinyuan Cheng<sup style="color:#ffac33;">1</sup></a>
               ,
             </span>
             <span class="author-block">Junwen Duan<sup style="color:#ffac33;">1</sup>,</span><br>
@@ -143,7 +143,7 @@
           <div class="is-size-5 publication-authors">
             <!-- <span class="author-block"><sup style="color:#6fbf73;">1</sup>IN.AI Research,</span> -->
             <span class="author-block"><sup style="color:#ffac33;">1</sup>Fudan University,</span>
-            <span class="author-block"><sup style="color:#ed4b82;">2</sup>National University of Singapore,</span>
+            <span class="author-block"><sup style="color:#ed4b82;">2</sup>National University of Singapore</span>
             <!-- <span class="author-block"><sup style="color:#007bff;">4</sup>Independent,</span></br>
             <span class="author-block"><sup style="color:#ffac33;">5</sup>Carnegie Mellon University,</span>
             <span class="author-block"><sup style="color:#ed4b82;">6</sup>University of Victoria,</span>
@@ -268,7 +268,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
         <div class="content has-text-centered">
-          <img src="static/images/intro_siuo.jpg" alt="geometric reasoning" width="50%"/>
+          <img src="static/images/intro_siuo.jpf" alt="geometric reasoning" width="50%"/>
           <p> An example of the SIUO (Safe Inputs but Unsafe Output). The input consists of a safe image and text, but their semantic combination is unsafe. Such inputs can easily prompt LVLMs to generate unsafe responses.</p>
         </div>
     </div>
@@ -283,16 +283,16 @@
         <h2 class="title is-3">🔔News</h2>
         <div class="content has-text-justified">
           <p>
-            <b>🚀[2024-01-31]: We added Human Expert performance on the <a href="#leaderboard">Leaderboard</a>!🌟</b>
+            <b>🚀[2024-01-31]: Exciting to share our new benchmark about cross-modality safety alignment on <a href="https://github.com/sinwang20/SIUO">Github</a>!🌟</b>
           </p>
-          <p>
+          <!-- <p>
             <b>🔥[2023-12-04]: Our evaluation server for the test set is now available on <a href="https://eval.ai/web/challenges/challenge-page/2179/overview"><b>EvalAI</b></a>. We welcome all submissions and look forward to your participation! 😆</b>
-          </p>
+          </p> -->
       </div>      
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce MMMU: a new benchmark designed to evaluate multimodal models on massive multi-discipline tasks demanding college-level subject knowledge and deliberate reasoning. MMMU includes <b>11.5K</b> meticulously collected multimodal questions from college exams, quizzes, and textbooks, covering six core disciplines: Art & Design, Business, Science, Health & Medicine, Humanities & Social Science, and Tech & Engineering. These questions span <b>30</b> subjects and <b>183</b> subfields, comprising 30 highly heterogeneous image types, such as charts, diagrams, maps, tables, music sheets, and chemical structures. Unlike existing benchmarks, MMMU focuses on advanced perception and reasoning with domain-specific knowledge, challenging models to perform tasks akin to those faced by experts. Our evaluation of 14 open-source LMMs and the proprietary GPT-4V(ision) highlights the substantial challenges posed by MMMU. Even the advanced GPT-4V only achieves a 56% accuracy, indicating significant room for improvement. We believe MMMU will stimulate the community to build next-generation multimodal foundation models towards expert artificial general intelligence.
+            As Artificial General Intelligence (AGI) becomes increasingly integrated into various facets of human life, ensuring the safety and ethical alignment of such systems is paramount. Previous studies primarily focus on single-modality threats, which may not suffice given the integrated and complex nature of cross-modality interactions. We introduce a novel safety alignment challenge called <em>Safe Inputs but Unsafe Output (SIUO)</em> to evaluate cross-modality safety alignment. Specifically, it considers cases where single modalities are safe independently but could potentially lead to unsafe or unethical outputs when combined. To empirically investigate this problem, we developed the SIUO, a cross-modality benchmark encompassing 9 critical safety domains, such as self-harm, illegal activities, and privacy violations. Our findings reveal substantial safety vulnerabilities in both closed- and open-source LVLMs, such as GPT-4V and LLaVA, underscoring the inadequacy of current models to reliably interpret and respond to complex, real-world scenarios.
           </p>
         </div>
       </div>
@@ -305,8 +305,8 @@
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
   <h1 class="title is-1 mmmu">
-    <img src="static/images/mmmu_icon2.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-    <span class="mmmu" style="vertical-align: middle">MMMU Benchmark</span>
+    <img src="static/images/siuo_icon.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+    <span class="mmmu" style="vertical-align: middle">SIUO Benchmark</span>
   </h1>
   </div>
 </section>
@@ -318,16 +318,19 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce the Massive Multi-discipline Multimodal Understanding and Reasoning (MMMU) benchmark, a novel benchmark meticulously curated to assess the expert-level multimodal understanding capability of foundation models across a broad scope of tasks. Covering subjects across disciplines, including Art, Business, Health & Medicine, Science, Humanities & Social Science, and Tech & Engineering, and over subfields. The detailed subject coverage and statistics are detailed in the figure. The questions in our benchmark were manually collected by a team of college students (including coauthors) from various disciplines and subjects, drawing from online sources, textbooks, and lecture materials.
+            We introduce the Safe Inputs but Unsafe Output (SIUO) benchmark, a novel benchmark meticulously curated to assess the cross-modality safety alignment capability of LVLMs. Covering safety domains across disciplines, including Self-Harm, Dangerous Behavior, Morality, Illegal Activities & Crime, Controversial Topics & Politics, Discrimination & Stereotyping, Religion Beliefs, Information Misinterpretation and Privacy Violation. 
+            <!-- The detailed subject coverage and statistics are detailed in the figure. The questions in our benchmark were manually collected by a team of college students (including coauthors) from various disciplines and subjects, drawing from online sources, textbooks, and lecture materials. -->
           </p>
-          <img src="static/images/mmlu_example.Jpeg" alt="algebraic reasoning" class="center">
+          <img src="static/images/example2.jpg" alt="algebraic reasoning" class="center">
           <br>
           <p>
-             MMMU is designed to measure three essential skills in LMMs: perception, knowledge, and reasoning. Our aim is to evaluate how well these models can not only perceive and understand information across different modalities but also apply reasoning with subject-specific knowledge to derive the solution.
+            SIUO is designed to evaluate three essential dimensions in multimodal models: integration, knowledge, and reasoning. Our goal is to assess how effectively these models can integrate information from various modalities, align with human values through substantial knowledge, and apply ethical reasoning to predict outcomes and ensure user safety. This comprehensive evaluation ensures that models can meet the stringent safety standards required in real-world applications.
           </p>
-          <p>
+          <img src="static/images/dim3.jpg" alt="algebraic reasoning" class="center">
+          <br>
+          <!-- <p>
             Our MMMU benchmark introduces key challenges to multimodal foundation models, as detailed in a figure. Among these, we particularly highlight the challenge stemming from the requirement for both expert-level visual perceptual abilities and deliberate reasoning with subject-specific knowledge. This challenge is vividly illustrated through our tasks, which not only demand the processing of various heterogeneous image types but also necessitate a model's adeptness in using domain-specific knowledge to deeply understand both the text and images and to reason. This goes significantly beyond basic visual perception, calling for an advanced approach that integrates advanced multimodal analysis with domain-specific knowledge.
-          </p>
+          </p> -->
 
           
 
@@ -337,27 +340,27 @@
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Comparisons with Existing Benchmarks</h2>
+        <h2 class="title is-3">Statistics</h2>
         <div class="content has-text-justified">
           <p>
-            To further distinguish the difference between <i>dataset</i> and other existing ones, we elaborate the benchmark details in Figure. 
-            From the <i>breadth</i> perspective, the prior benchmarks are heavily focused on daily knowledge and common sense. 
-            The covered image format is also limited. Our benchmark aims to cover college-level knowledge with 30 image formats including diagrams, 
-            tables, charts, chemical structures, photos, paintings, geometric shapes, music sheets, medical images, etc. 
-            In the <i>depth</i> aspect, the previous benchmarks normally require commonsense knowledge or simple physical or temporal reasoning. 
-            In contrast, our benchmark requires deliberate reasoning with college-level subject knowledge.
+            The SIUO dataset comprises 167 meticulously crafted test cases, with an average word length of 27.2 The SIUO dataset covers nine critical safety domains. To ensure that our examples cover a greater diversity of this safety domain, we also decompose the safety domain into safety subclasses. For example, self-harm is divided into suicide, NSSI, and unhealthy habits. The statistics for the safety domains and safety subclasses are shown in Figure.
         </p>
-        <div class="content has-text-centered">
+        <!-- <div class="content has-text-centered">
           <img src="static/images/compare.Jpeg" alt="algebraic reasoning" class="center">
           <p> Sampled MMMU examples from each discipline. The questions and images need expert-level knowledge to understand and reason.</p>
-        </div>
+        </div> -->
+        <div class="content has-text-centered">
+          <iframe src="static/images/sunburst_chart.html" width="100%" height="600px" style="border:none;"></iframe>
+          <p> SIUO covers 9 safety domains and 33 subcategories.</p>
+      </div>
+        
           
           
         </div>
     </div>
     </div>
 
-    <div class="columns is-centered m-6">
+    <!-- <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Statistics</h2>
         <div id="results-carousel" class="carousel results-carousel">
@@ -381,7 +384,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -403,20 +406,19 @@
         <div class="content">
           <div class="content has-text-justified">
             <p>
-              We evaluate various models including LLMs and LMMs.
-              In each type, we consider both closed- and open-source models.
+              We evaluate various LVLMs, including both closed- and open-source models.
               Our evaluation is conducted under a zero-shot setting to assess the capability of models to generate accurate answers without fine-tuning or few-shot demonstrations on our benchmark.
               For all models, we use the default prompt provided by each model for multi-choice or open QA, if available.
-              If models do not provide prompts for task types in MMMU, we conduct prompt engineering on the validation set and use the most effective prompt for the later zero-shot experiment.
+              <!-- If models do not provide prompts for task types in MMMU, we conduct prompt engineering on the validation set and use the most effective prompt for the later zero-shot experiment. -->
 
             </p>
           </div>
 
-          <button id="toggleButton" onclick="changeButtonText()"><b style='font-size: larger;'>Validation Set Leaderboard</b> (Click to Switch)</button>
+          <!-- <button id="toggleButton" onclick="changeButtonText()"><b style='font-size: larger;'>Validation Set Leaderboard</b> (Click to Switch)</button> -->
           <div class="model-labels-container">
-            <span class="leaderboard-label" style="background-color: rgba(255, 208, 80, 0.15);">Human Expert</span>
+            <!-- <span class="leaderboard-label" style="background-color: rgba(255, 208, 80, 0.15);">Human Expert</span> -->
             <span class="leaderboard-label" style="background-color: rgba(249, 242, 248, 1);">Open-Source</span>
-            <span class="leaderboard-label" style="background-color: rgba(117, 209, 215, 0.1);">Proprietary</span>
+            <span class="leaderboard-label" style="background-color: rgba(117, 209, 215, 0.1);">Closed-Source</span>
           </div>
           <!-- Validation Set Leaderboard -->
           <table id="table1" class="js-sort-table">
@@ -424,1672 +426,258 @@
               <td class="js-sort-number"><strong>Reset</strong></td>
               <td class="js-sort-string"><strong>Size</strong></td>
               <td class="js-sort-date"><strong>Date</strong></td>
-              <td class="js-sort-number"><strong>Overall</strong></td>
-              <td class="js-sort-number"><strong>Art & Design</strong></td>
-              <td class="js-sort-number"><strong>Business</strong></td>
-              <td class="js-sort-number"><strong>Science</strong></td>
-              <td class="js-sort-number"><strong>Health & Medicine</strong></td>
+              <td class="js-sort-number"><strong>Safe</strong></td>
+              <td class="js-sort-number"><strong>Effective</strong></td>
+              <td class="js-sort-number"><strong>Safe & Effective</strong></td>
+              <td class="js-sort-number"><strong>Multi-Choice</strong></td>
+              <!-- <td class="js-sort-number"><strong>Health & Medicine</strong></td>
               <td class="js-sort-number"><strong>Human. & Social Sci.</strong></td>
-              <td class="js-sort-number"><strong>Tech & Eng.</strong></td>
+              <td class="js-sort-number"><strong>Tech & Eng.</strong></td> -->
             </tr>
-            <tr style="background-color: rgba(255, 208, 80, 0.15);">
+            <tr style="background-color: rgba(117, 209, 215, 0.1);">
               <td style="text-align: left;">
-                <b>Human Expert (Best)</b>
+                <a href="https://openai.com/contributions/gpt-4v">
+                    <b>GPT-4V(ision)</b>
+                </a>
               </td>
               <td>-</td>
-              <td>2024-01-31</td>
-              <td><b>88.6</b></td>
-              <td><b>89.2</b></td>
-              <td><b>90.7</b></td>
-              <td><b>90.0</b></td>
-              <td><b>87.3</b></td>
-              <td><b>89.2</b></td>
-              <td><b>86.2</b></td>
+              <td>2024-04-29</td>
+              <td><b>53.29</b></td>
+              <td>69.46</td>
+              <td>23.35</td>
+              <td>38.92</td>
             </tr>
-            <tr style="background-color: rgba(255, 208, 80, 0.15);">
-              <td style="text-align: left;">
-                <b>Human Expert (Medium)</b>
-              </td>
-              <td>-</td>
-              <td>2024-01-31</td>
-              <td>82.6</td>
-              <td>84.2</td>
-              <td>86.0</td>
-              <td>84.7</td>
-              <td>78.8</td>
-              <td>85.0</td>
-              <td>79.1</td>
-            </tr>
-            <tr style="background-color: rgba(255, 208, 80, 0.15);">
-              <td style="text-align: left;">
-                <b>Human Expert (Worst)</b>
-              </td>
-              <td>-</td>
-              <td>2024-01-31</td>
-              <td>76.2</td>
-              <td>80.8</td>
-              <td>78.0</td>
-              <td>78.0</td>
-              <td>73.3</td>
-              <td>74.2</td>
-              <td>74.3</td>
-            </tr>
+          
             <tr style="background-color: rgba(117, 209, 215, 0.1);">
               <td style="text-align: left;">
                 <a href="https://openai.com/index/hello-gpt-4o/">
-                    <b>GPT-4o*</b>
+                    <b>GPT-4o</b>
                 </a>
               </td>
               <td>-</td>
-              <td>2024-05-27</td>
-              <td><b>69.1</b></td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
+              <td>2024-05-06</td>
+              <td>50.90</td>
+              <td><b>95.81</b></td>
+              <td><b>46.71</b></td>
+              <td>41.32</td>
             </tr>
             <tr style="background-color: rgba(117, 209, 215, 0.1);">
               <td style="text-align: left;">
                 <a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">
-                    <b>Gemini 1.5 Pro*</b>
+                    <b>Gemini 1.5 Pro</b>
                 </a>
               </td>
               <td>-</td>
-              <td>2024-05-31</td>
-              <td style="text-decoration: underline;">62.2</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
+              <td>2024-04-30</td>
+              <td style="text-decoration: underline;">52.10</td>
+              <td>91.62</td>
+              <td style="text-decoration: underline;">45.51</td>
+              <td style="text-decoration: underline;">47.31</td>
             </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://deepmind.google/technologies/gemini/#introduction">
-                    <b>Gemini 1.0 Ultra*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-11</td>
-              <td>59.4</td>
-              <td>70.0</td>
-              <td>56.7</td>
-              <td>48.0</td>
-              <td><b>67.3</b></td>
-              <td><b>78.3</b></td>
-              <td>47.1</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://www.anthropic.com/news/claude-3-family">
-                    <b>Claude 3 Opus*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-03-05</td>
-              <td>59.4</td>
-              <td>67.5</td>
-              <td><b>67.2</b></td>
-              <td>48.9</td>
-              <td>61.1</td>
-              <td>70.0</td>
-              <td><b>50.6</b></td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://openai.com/contributions/gpt-4v">
-                    <b>GPT-4V(ision) (Playground)</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>56.8</td>
-              <td>65.8</td>
-              <td style="text-decoration: underline;">59.3</td>
-              <td><b>54.7</b></td>
-              <td style="text-decoration: underline;">64.7</td>
-              <td>72.5</td>
-              <td>36.7</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://publications.reka.ai/reka-core-tech-report.pdf">
-                    <b>Reka Core*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-04-23</td>
-              <td>56.3</td>
-              <td><b>75.9</b</td>
-              <td>47.3</td>
-              <td style="text-decoration: underline;">49.3</td>
-              <td>58.0</td>
-              <td style="text-decoration: underline;">75.0</td>
-              <td>44.2</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">
-                    <b>Gemini 1.5 Flah*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-05-31</td>
-              <td>56.1</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://platform.sensenova.cn/doc?path=/model/mllm.md">
-                    <b>SenseChat-Vision-0423-Preview*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-04-23</td>
-              <td>54.6</td>
-              <td>66.7</td>
-              <td>54.0</td>
-              <td>45.3</td>
-              <td>53.3</td>
-              <td style="text-decoration: underline;">75.0</td>
-              <td>43.8</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://reka.ai/reka-flash-an-efficient-and-capable-multimodal-language-model/">
-                    <b>Reka Flash*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-04-23</td>
-              <td>53.3</td>
-              <td>61.7</td>
-              <td>42.7</td>
-              <td>47.3</td>
-              <td>59.3</td>
-              <td>74.2</td>
-              <td>44.3</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://www.anthropic.com/news/claude-3-family">
-                    <b>Claude 3 Sonnet*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-03-05</td>
-              <td>53.1</td>
-              <td>61.7</td>
-              <td>58.2</td>
-              <td>37.1</td>
-              <td>57.1</td>
-              <td>68.7</td>
-              <td>45.0</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                 <a href="https://huggingface.co/HyperGAI">
-                    <b>HPT Pro*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-03-15</td>
-              <td>52.0</td>
-              <td>66.7</td>
-              <td>43.3</td>
-              <td>42.7</td>
-              <td>50.7</td>
-              <td>72.5</td>
-              <td>43.8</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://github.com/NVlabs/VILA">
-                    <b>VILA1.5*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-05-04</td>
-              <td>51.9</td>
-              <td>60.8</td>
-              <td>43.3</td>
-              <td>36.0</td>
-              <td>57.3</td>
-              <td>73.3</td>
-              <td style="text-decoration: underline;">48.1</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://github.com/OpenGVLab/InternVL/">
-                    <b>InternVL-Chat-V1.2*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-02-23</td>
-              <td>51.6</td>
-              <td>62.5</td>
-              <td>40.7</td>
-              <td>39.3</td>
-              <td>58.7</td>
-              <td>70.0</td>
-              <td>46.2</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://github.com/QwenLM/Qwen-VL/tree/master">
-                    <b>Qwen-VL-MAX*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-01-27</td>
-              <td>51.4</td>
-              <td style="text-decoration: underline;">72.5</td>
-              <td>43.3</td>
-              <td>40.0</td>
-              <td>58.0</td>
-              <td>69.2</td>
-              <td>38.6</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://www.kunlun.com/en/">
-                    <b>Skywork-VL*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-05-30</td>
-              <td>51.4</td>
-              <td>66.7</td>
-              <td>41.3</td>
-              <td>38.7</td>
-              <td>55.3</td>
-              <td>68.3</td>
-              <td>46.7</td>
-            </tr>
+            
+            
             <tr style="background-color: rgba(249, 242, 248, 1);">
               <td style="text-align: left;">
                  <a href="https://llava-vl.github.io/blog/2024-01-30-llava-1-6/">
-                    <b>LLaVA-1.6-34B *</b>
+                    <b>LLaVA-1.6-34B</b>
                  </a>
               </td>
               <td>34B</td>
-              <td>2024-02-01</td>
-              <td>51.1</td>
-              <td>67.5</td>
-              <td>46.0</td>
-              <td>39.3</td>
-              <td>52.0</td>
-              <td>67.5</td>
-              <td>43.8</td>
+              <td>2024-04-29</td>
+              <td>40.72</td>
+              <td><b>95.81</b></td>
+              <td>37.13</td>
+              <td><b>52.69</b></td>
             </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://www.anthropic.com/news/claude-3-family">
-                    <b>Claude 3 Haiku*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-03-05</td>
-              <td>50.2</td>
-              <td>60.8</td>
-              <td>52.5</td>
-              <td>37.1</td>
-              <td>52.3</td>
-              <td>66.0</td>
-              <td>41.5</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://www.adept.ai/blog/adept-fuyu-heavy">
-                    <b>Adept Fuyu-Heavy*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-01-31</td>
-              <td>48.3</td>
-              <td>53.4</td>
-              <td>46.3</td>
-              <td>33.7</td>
-              <td>51.3</td>
-              <td>72.2</td>
-              <td>44.0</td>
-           </tr>
+            
               <tr style="background-color: rgba(117, 209, 215, 0.1);">
               <td style="text-align: left;">
                 <a href="https://deepmind.google/technologies/gemini/#introduction">
-                    <b>Gemini 1.0 Pro*</b>
+                    <b>Gemini 1.0 Pro</b>
                 </a>
               </td>
               <td>-</td>
-              <td>2023-12-11</td>
-              <td>47.9</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
+              <td>2024-04-29</td>
+              <td>27.54</td>
+              <td style="text-decoration: underline;">92.22</td>
+              <td>25.15</td>
+              <td>34.13</td>
             </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <!-- <a href=""> -->
-                    <b>Marco-VL-Plus*</b>
-                <!-- </a> -->
-              </td>
-              <td>-</td>
-              <td>2024-03-09</td>
-              <td>46.2</td>
-              <td>60.8</td>
-              <td>37.3</td>
-              <td>35.3</td>
-              <td>48.7</td>
-              <td>69.2</td>
-              <td>37.1</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://huggingface.co/01-ai/Yi-VL-34B">
-                    <b>Yi-VL-34B*</b>
-                 </a>
-              </td>
-              <td>34B</td>
-              <td>2023-12-31</td>
-              <td>45.9</td>
-              <td>59.2</td>
-              <td>36.0</td>
-              <td>33.3</td>
-              <td>51.3</td>
-              <td>62.5</td>
-              <td>41.0</td>
-            </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://github.com/QwenLM/Qwen-VL?tab=readme-ov-file#qwen-vl-plus">
-                    <b>Qwen-VL-PLUS*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-15</td>
-              <td>45.2</td>
-              <td>60.0</td>
-              <td>35.3</td>
-              <td>37.3</td>
-              <td>46.7</td>
-              <td>65.8</td>
-              <td>36.7</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://huggingface.co/HyperGAI">
-                    <b>HPT Air*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-03-15</td>
-              <td>44.0</td>
-              <td>63.3</td>
-              <td>31.3</td>
-              <td>34.7</td>
-              <td>45.3</td>
-              <td>59.2</td>
-              <td>42.9</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://github.com/InternLM/InternLM-XComposer">
-                    <b>InternLM-XComposer2-VL*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-01-27</td>
-              <td>43.0</td>
-              <td>60.0</td>
-              <td>34.0</td>
-              <td>34.7</td>
-              <td>46.0</td>
-              <td>62.5</td>
-              <td>32.4</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://www.reka.ai/">
-                    <b>Reka Edge*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-04-23</td>
-              <td>42.8</td>
-              <td>52.5</td>
-              <td>36.0</td>
-              <td>42.7</td>
-              <td>41.3</td>
-              <td>59.2</td>
-              <td>33.8</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <!-- <a href=""> -->
-                    <b>Marco-VL*</b>
-                <!-- </a> -->
-              </td>
-              <td>-</td>
-              <td>2024-01-16</td>
-              <td>41.2</td>
-              <td>57.5</td>
-              <td>30.0</td>
-              <td>28.0</td>
-              <td>45.3</td>
-              <td>65.8</td>
-              <td>32.4</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://huggingface.co/openbmb/OmniLMM-12B">
-                    <b>OmniLMM-12B*</b>
-                 </a>
-              </td>
-              <td>12B</td>
-              <td>2024-02-07</td>
-              <td>41.1</td>
-              <td>58.3</td>
-              <td>34.0</td>
-              <td>27.3</td>
-              <td>44.0</td>
-              <td>62.5</td>
-              <td>31.9</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://huggingface.co/Infi-MM/infimm-zephyr">
-                    <b>InfiMM-Zephyr-7B*</b>
-                 </a>
-              </td>
-              <td>7B</td>
-              <td>2024-01-18</td>
-              <td>39.4</td>
-              <td>55.8</td>
-              <td>28.0</td>
-              <td>33.3</td>
-              <td>42.7</td>
-              <td>59.2</td>
-              <td>29.0</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://huggingface.co/01-ai/Yi-VL-6B">
-                    <b>Yi-VL-6B*</b>
-                 </a>
-              </td>
-              <td>6B</td>
-              <td>2024-01-23</td>
-              <td>39.1</td>
-              <td>52.5</td>
-              <td>30.7</td>
-              <td>31.3</td>
-              <td>38.0</td>
-              <td>53.3</td>
-              <td>35.7</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://github.com/OpenGVLab/InternVL/">
-                    <b>InternVL-Chat-V1.1*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-01-27</td>
-              <td>39.1</td>
-              <td>56.7</td>
-              <td>34.7</td>
-              <td>31.3</td>
-              <td>39.3</td>
-              <td>57.5</td>
-              <td>27.1</td>
-            </tr>
+
             <tr style="background-color: #f9f2f8;">
               <td style="text-align: left;">
-                <a href="https://github.com/BAAI-DCAI/Bunny">
-                    <b>Bunny-3B*</b>
+                <a href="https://llava-vl.github.io/">
+                    <b>LLaVA-1.5-7B</b>
                 </a>
               </td>
-              <td>3B</td>
-              <td>2024-02-13</td>
-              <td>38.2</td>
-              <td>49.2</td>
-              <td>30.7</td>
-              <td>30.7</td>
-              <td>40.7</td>
-              <td>45.0</td>
-              <td>37.1</td>
+              <td>7.2B</td>
+              <td>2024-04-29</td>
+              <td>21.56</td>
+              <td>87.43</td>
+              <td>16.17</td>
+              <td>33.53</td>
             </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2307.04087">
-                    <b>SVIT*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-26</td>
-              <td>38.0</td>
-              <td>52.5</td>
-              <td>27.3</td>
-              <td>28.0</td>
-              <td>42.0</td>
-              <td>51.7</td>
-              <td>33.8</td>
-            </tr>
-            <tr style="background-color: #f9f2f8;">
-              <td style="text-align: left;">
-                <a href="https://huggingface.co/openbmb/MiniCPM-V">
-                    <b>MiniCPM-V*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-02-07</td>
-              <td>37.2</td>
-              <td>55.8</td>
-              <td>33.3</td>
-              <td>28.0</td>
-              <td>32.7</td>
-              <td>58.3</td>
-              <td>27.1</td>
-            </tr>
-            <tr style="background-color: #f9f2f8;">
-              <td style="text-align: left;">
-                <a href="https://huggingface.co/openbmb/MiniCPM-V-2">
-                    <b>MiniCPM-V-2*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-04-16</td>
-              <td>37.1</td>
-              <td>63.3</td>
-              <td>28.7</td>
-              <td>30.0</td>
-              <td>30.0</td>
-              <td>56.7</td>
-              <td>27.1</td>
-            </tr>
+
             <tr style="background-color: #f9f2f8;">
               <td style="text-align: left;">
                 <a href="https://llava-vl.github.io/">
                     <b>LLaVA-1.5-13B</b>
                 </a>
               </td>
-              <td>13B</td>
-              <td>2023-11-27</td>
-              <td>36.4</td>
-              <td>51.7</td>
-              <td>22.7</td>
-              <td>29.3</td>
-              <td>38.7</td>
-              <td>53.3</td>
-              <td>31.4</td>
+              <td>13.4B</td>
+              <td>2024-04-29</td>
+              <td>22.16</td>
+              <td>91.62</td>
+              <td>19.76</td>
+              <td>32.93</td>
             </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2312.13286">
-                    <b>Emu2-Chat*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-24</td>
-              <td>36.3</td>
-              <td>55.0</td>
-              <td>30.0</td>
-              <td>28.7</td>
-              <td>28.7</td>
-              <td>46.7</td>
-              <td>35.2</td>
-            </tr>
+
             <tr style="background-color: #f9f2f8;">
               <td style="text-align: left;">
                 <a href="https://arxiv.org/abs/2308.12966">
                     <b>Qwen-VL-7B-Chat</b>
                 </a>
               </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>35.9</td>
-              <td>51.7</td>
-              <td>29.3</td>
-              <td>29.3</td>
-              <td>33.3</td>
-              <td>45.0</td>
-              <td>32.9</td>
+              <td>9.6B</td>
+              <td>2024-04-29</td>
+              <td>41.32</td>
+              <td>82.63</td>
+              <td>29.94</td>
+              <td>20.96</td>
             </tr>
-            <tr style="background-color: #f9f2f8;">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2305.06500">
-                    <b>InstructBLIP-T5-XXL</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>35.7</td>
-              <td>44.2</td>
-              <td>24.0</td>
-              <td>30.7</td>
-              <td>35.3</td>
-              <td>49.2</td>
-              <td>35.2</td>
-            </tr>
-            <tr style="background-color: #f9f2f8;">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2301.12597">
-                    <b>BLIP-2 FLAN-T5-XXL</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>35.4</td>
-              <td>41.7</td>
-              <td>30.0</td>
-              <td>34.7</td>
-              <td>32.0</td>
-              <td>50.8</td>
-              <td>30.0</td>
-            </tr>
-            <tr style="background-color: #f9f2f8;">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2301.12597">
-                    <b>BLIP-2 FLAN-T5-XL</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>34.4</td>
-              <td>44.2</td>
-              <td>26.7</td>
-              <td>30.7</td>
-              <td>35.3</td>
-              <td>50.0</td>
-              <td>27.6</td>
-            </tr>
-            <tr style="background-color: #f9f2f8;">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2305.06500">
-                    <b>InstructBLIP-T5-XL</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>32.9</td>
-              <td>40.0</td>
-              <td>28.0</td>
-              <td>32.7</td>
-              <td>28.7</td>
-              <td>47.5</td>
-              <td>27.1</td>
-            </tr>
-            <tr style="background-color: #f9f2f8;">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2311.07575">
-                    <b>SPHINX*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-26</td>
-              <td>32.9</td>
-              <td>48.3</td>
-              <td>24.7</td>
-              <td>26.7</td>
-              <td>30.7</td>
-              <td>50.0</td>
-              <td>26.2</td>
-            </tr>
+
             <tr style="background-color: #f9f2f8;">
               <td style="text-align: left;">
                 <a href="https://arxiv.org/abs/2311.04257">
-                    <b>mPLUG-OWL2*</b>
+                    <b>mPLUG-OWL2</b>
                 </a>
               </td>
-              <td>-</td>
+              <td>8.2B</td>
               <td>2023-12-04</td>
-              <td>32.7</td>
-              <td>45.8</td>
-              <td>24.7</td>
-              <td>22.7</td>
-              <td>32.0</td>
-              <td>45.8</td>
-              <td>31.0</td>
+              <td>22.16</td>
+              <td>90.42</td>
+              <td>17.37</td>
+              <td>28.14</td>
+
             </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://deepmind.google/technologies/gemini/#introduction">
-                    <b>Gemini Nano2*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-11</td>
-              <td>32.6</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-              <td></td>
-            </tr>
+
             <tr style="background-color: #f9f2f8;">
               <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2305.03726">
-                    <b>Otter</b>
+                <a href="https://arxiv.org/abs/2311.04257">
+                    <b>MiniGPT4-v2</b>
                 </a>
               </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>32.2</td>
-              <td>37.5</td>
-              <td>24.0</td>
-              <td>34.7</td>
-              <td>30.7</td>
-              <td>41.7</td>
-              <td>29.0</td>
+              <td>8B</td>
+              <td>2023-12-04</td>
+              <td>41.92</td>
+              <td>81.44</td>
+              <td>32.93</td>
+              <td>27.54</td>
+
             </tr>
+             
+            
             <tr style="background-color: #f9f2f8;">
               <td style="text-align: left;">
                 <a href="https://arxiv.org/abs/2311.03079">
                     <b>CogVLM</b>
                 </a>
               </td>
+              <td>17B</td>
+              <td>2024-04-29</td>
+              <td>22.75</td>
+              <td>91.02</td>
+              <td>20.96</td>
+              <td>27.54</td>
+
+            </tr>
+
+            <tr style="background-color: #f9f2f8;">
+              <td style="text-align: left;">
+                <a href="https://arxiv.org/abs/2305.06500">
+                    <b>InstructBLIP2-T5-XL</b>
+                </a>
+              </td>
+              <td>4B</td>
+              <td>2024-04-29</td>
+              <td>8.38</td>
+              <td>51.50</td>
+              <td>1.80</td>
               <td>-</td>
-              <td>2023-11-27</td>
-              <td>32.1</td>
-              <td>40.8</td>
-              <td>25.3</td>
-              <td>28.0</td>
-              <td>32.0</td>
-              <td>45.0</td>
-              <td>27.6</td>
             </tr>
             <tr style="background-color: #f9f2f8;">
               <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2304.15010">
-                    <b>LLaMA-Adapter2-7B</b>
+                <a href="https://arxiv.org/abs/2305.06500">
+                    <b>InstructBLIP2-T5-XXL</b>
                 </a>
               </td>
-              <td>7B</td>
-              <td>2023-11-27</td>
-              <td>29.8</td>
-              <td>29.2</td>
-              <td>25.3</td>
-              <td>30.7</td>
-              <td>30.7</td>
-              <td>33.3</td>
-              <td>30.0</td>
+              <td>12B</td>
+              <td>2024-04-29</td>
+              <td>11.98</td>
+              <td>51.50</td>
+              <td>4.79</td>
+              <td>-</td>
             </tr>
+        
+            
+
+
             <tr style="background-color: #f9f2f8;">
               <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2308.01390">
-                    <b>OpenFlamingo2-9B</b>
-                </a>
-              </td>
-              <td>9B</td>
-              <td>2023-11-27</td>
-              <td>28.7</td>
-              <td>40.0</td>
-              <td>28.0</td>
-              <td>23.3</td>
-              <td>27.3</td>
-              <td>30.8</td>
-              <td>26.2</td>
-            </tr>
-            <tr style="background-color: #f9f2f8;">
-              <td style="text-align: left;">
-                <a href="https://www.adept.ai/blog/fuyu-8b">
-                    <b>Adept Fuyu-8B</b>
+                <a href="https://arxiv.org/abs/2305.06500">
+                    <b>InstructBLIP2-7B</b>
                 </a>
               </td>
               <td>8B</td>
-              <td>2023-11-27</td>
-              <td>27.9</td>
-              <td>36.7</td>
-              <td>32.0</td>
-              <td>22.0</td>
-              <td>28.0</td>
-              <td>32.5</td>
-              <td>21.4</td>
-           </tr>
-           <tr style="background-color: #f9f2f8;">
-            <td style="text-align: left;">
-              <a href="https://minigpt-4.github.io/">
-                  <b>MiniGPT4-Vicuna-13B</b>
-              </a>
-            </td>
-            <td>13B</td>
-            <td>2023-11-27</td>
-            <td>26.8</td>
-            <td>29.2</td>
-            <td>21.3</td>
-            <td>28.7</td>
-            <td>30.7</td>
-            <td>29.2</td>
-            <td>23.8</td>
-            </tr>
-            <tr style="background-color: #f4f9fe;">
-              <td style="color: #808080;text-align: left;">Frequent Choice</td>
+              <td>2024-04-29</td>
+              <td>24.55</td>
+              <td>51.50</td>
+              <td>4.19</td>
               <td>-</td>
-              <td>2023-11-27</td>
-              <td style="color: #808080;">26.8</td>
-              <td style="color: #808080;">23.3</td>
-              <td style="color: #808080;">29.3</td>
-              <td style="color: #808080;">27.3</td>
-              <td style="color: #808080;">30.0</td>
-              <td style="color: #808080;">25.8</td>
-              <td style="color: #808080;">24.8</td>
             </tr>
+
             <tr style="background-color: #f9f2f8;">
               <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2306.14824">
-                    <b>Kosmos2</b>
+                <a href="https://arxiv.org/abs/2305.06500">
+                    <b>InstructBLIP2-13B</b>
                 </a>
               </td>
+              <td>14B</td>
+              <td>2024-04-29</td>
+              <td>19.76</td>
+              <td>49.10</td>
+              <td>4.19</td>
               <td>-</td>
-              <td>2023-11-27</td>
-              <td>24.4</td>
-              <td>25.0</td>
-              <td>18.0</td>
-              <td>19.3</td>
-              <td>28.0</td>
-              <td>30.0</td>
-              <td>26.7</td>
             </tr>
+            
+            
+            
+           
+        
             <tr style="background-color: #f4f9fe;">
               <td style="color: #808080;text-align: left;">Random Choice</td>
               <td>-</td>
-              <td>2023-11-27</td>
-              <td style="color: #808080;">22.1</td>
-              <td style="color: #808080;">29.2</td>
-              <td style="color: #808080;">24.7</td>
-              <td style="color: #808080;">18.0</td>
-              <td style="color: #808080;">20.7</td>
-              <td style="color: #808080;">20.0</td>
-              <td style="color: #808080;">21.4</td>
+              <td>2024-04-29</td>
+              <td style="color: #808080;">-</td>
+              <td style="color: #808080;">-</td>
+              <td style="color: #808080;">-</td>
+              <td style="color: #808080;">24.95</td>
+
             </tr>
           </table>
           <!-- Test Set Leaderboard -->
-          <table id="table2" class="js-sort-table hidden">
-            <tr>
-              <td class="js-sort-number"><strong>Reset</strong></td>
-              <td class="js-sort-string"><strong>Size</strong></td>
-              <td class="js-sort-date"><strong>Date</strong></td>
-              <td class="js-sort-number"><strong>Overall</strong></td>
-              <td class="js-sort-number"><strong>Art & Design</strong></td>
-              <td class="js-sort-number"><strong>Business</strong></td>
-              <td class="js-sort-number"><strong>Science</strong></td>
-              <td class="js-sort-number"><strong>Health & Medicine</strong></td>
-              <td class="js-sort-number"><strong>Human. & Social Sci.</strong></td>
-              <td class="js-sort-number"><strong>Tech & Eng.</strong></td>
-            </tr>
-              <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://openai.com/contributions/gpt-4v">
-                    <b>GPT-4V(ision) (Playground)</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td><b>55.7</b></td>
-              <td><b>65.3</b></td>
-              <td><b>64.3</b></td>
-              <td><b>48.4</b></td>
-              <td><b>63.5</b></td>
-              <td><b>76.3</b></td>
-              <td style="text-decoration: underline;">41.7</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://platform.sensenova.cn/doc?path=/model/mllm.md">
-                    <b>SenseChat-Vision-0423-Preview*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-04-23</td>
-              <td style="text-decoration: underline;">50.3</td>
-              <td>62.7</td>
-              <td style="text-decoration: underline;">44.1</td>
-              <td style="text-decoration: underline;">42.3</td>
-              <td style="text-decoration: underline;">55.7</td>
-              <td style="text-decoration: underline;">74.7</td>
-              <td><b>43.5</b></td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://github.com/NVlabs/VILA">
-                    <b>VILA1.5*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-05-04</td>
-              <td>46.9</td>
-              <td>62.1</td>
-              <td>40.6</td>
-              <td>37.7</td>
-              <td>51.7</td>
-              <td>74.0</td>
-              <td>39.5</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://github.com/QwenLM/Qwen-VL/tree/master">
-                    <b>Qwen-VL-MAX*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-01-27</td>
-              <td>46.8</td>
-              <td style="text-decoration: underline;">64.2</td>
-              <td>39.8</td>
-              <td>36.3</td>
-              <td>52.5</td>
-              <td>70.4</td>
-              <td>40.7</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://github.com/OpenGVLab/InternVL/">
-                    <b>InternVL-Chat-V1.2*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-02-23</td>
-              <td>46.2</td>
-              <td>62.5</td>
-              <td>37.6</td>
-              <td>37.9</td>
-              <td>49.7</td>
-              <td>70.1</td>
-              <td>40.8</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://www.kunlun.com/en/">
-                    <b>Skywork-VL*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2024-05-30</td>
-              <td>46.2</td>
-              <td>61.4</td>
-              <td>39.6</td>
-              <td>36.6</td>
-              <td>50.8</td>
-              <td>71.6</td>
-              <td>40.2</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://llava-vl.github.io/blog/2024-01-30-llava-1-6/">
-                    <b>LLaVA-1.6-34B *</b>
-                 </a>
-              </td>
-              <td>34B</td>
-              <td>2024-02-01</td>
-              <td>44.7</td>
-              <td>58.6</td>
-              <td>39.9</td>
-              <td>36.0</td>
-              <td>51.2</td>
-              <td>70.2</td>
-              <td>36.3</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <!-- <a href=""> -->
-                    <b>Marco-VL-Plus*</b>
-                <!-- </a> -->
-              </td>
-              <td>-</td>
-              <td>2024-03-09</td>
-              <td>44.3</td>
-              <td>57.4</td>
-              <td>34.7</td>
-              <td>38.5</td>
-              <td>48.7</td>
-              <td>72.2</td>
-              <td>36.7</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://huggingface.co/01-ai/Yi-VL-34B">
-                    <b>Yi-VL-34B*</b>
-                 </a>
-              </td>
-              <td>34B</td>
-              <td>2023-12-31</td>
-              <td>41.6</td>
-              <td>56.1</td>
-              <td>33.3</td>
-              <td>32.9</td>
-              <td>45.9</td>
-              <td>66.5</td>
-              <td>36.0</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <a href="https://github.com/QwenLM/Qwen-VL?tab=readme-ov-file#qwen-vl-plus">
-                    <b>Qwen-VL-PLUS*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-15</td>
-              <td>40.8</td>
-              <td>59.9</td>
-              <td>34.5</td>
-              <td>32.8</td>
-              <td>43.7</td>
-              <td>65.5</td>
-              <td>32.9</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <!-- <a href=""> -->
-                    <b>Marco-VL*</b>
-                <!-- </a> -->
-              </td>
-              <td>-</td>
-              <td>2024-01-16</td>
-              <td>40.4</td>
-              <td>56.5</td>
-              <td>31.0</td>
-              <td>31.0</td>
-              <td>46.9</td>
-              <td>66.5</td>
-              <td>33.8</td>
-            </tr>
-            <tr style="background-color: rgba(117, 209, 215, 0.1);">
-              <td style="text-align: left;">
-                <!-- <a href=""> -->
-                    <b>Weitu-VL-1.0-15B*</b>
-                <!-- </a> -->
-              </td>
-              <td>15B</td>
-              <td>2024-04-01</td>
-              <td>38.4</td>
-              <td>56.6</td>
-              <td>30.5</td>
-              <td>31.1</td>
-              <td>38.4</td>
-              <td>59.0</td>
-              <td>34.2</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://github.com/InternLM/InternLM-XComposer">
-                    <b>InternLM-XComposer2-VL*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-01-27</td>
-              <td>38.2</td>
-              <td>56.8</td>
-              <td>32.8</td>
-              <td>30.1</td>
-              <td>39.8</td>
-              <td>60.7</td>
-              <td>31.8</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://huggingface.co/01-ai/Yi-VL-6B">
-                    <b>Yi-VL-6B*</b>
-                 </a>
-              </td>
-              <td>6B</td>
-              <td>2024-01-23</td>
-              <td>37.8</td>
-              <td>53.4</td>
-              <td>30.3</td>
-              <td>30.0</td>
-              <td>39.3</td>
-              <td>58.5</td>
-              <td>34.1</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://huggingface.co/Infi-MM/infimm-zephyr">
-                    <b>InfiMM-Zephyr-7B*</b>
-                 </a>
-              </td>
-              <td>7B</td>
-              <td>2024-01-18</td>
-              <td>35.5</td>
-              <td>50.0</td>
-              <td>29.6</td>
-              <td>28.2</td>
-              <td>37.5</td>
-              <td>54.6</td>
-              <td>31.1</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                 <a href="https://github.com/OpenGVLab/InternVL/">
-                    <b>InternVL-Chat-V1.1*</b>
-                 </a>
-              </td>
-              <td>-</td>
-              <td>2024-01-27</td>
-              <td>35.3</td>
-              <td>53.7</td>
-              <td>31.7</td>
-              <td>28.2</td>
-              <td>36.5</td>
-              <td>56.4</td>
-              <td>28.0</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2307.04087">
-                    <b>SVIT*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-26</td>
-              <td>34.1</td>
-              <td>48.9</td>
-              <td>28.0</td>
-              <td>26.8</td>
-              <td>35.5</td>
-              <td>50.9</td>
-              <td>30.7</td>
-            </tr>
-            <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2312.13286">
-                    <b>Emu2-Chat*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-24</td>
-              <td>34.1</td>
-              <td>50.6</td>
-              <td>27.7</td>
-              <td>28.0</td>
-              <td>32.4</td>
-              <td>50.3</td>
-              <td>31.3</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2301.12597">
-                    <b>BLIP-2 FLAN-T5-XXL</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>34.0</td>
-              <td>49.2</td>
-              <td>28.6</td>
-              <td>27.3</td>
-              <td>33.7</td>
-              <td>51.5</td>
-              <td>30.4</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2305.06500">
-                    <b>InstructBLIP-T5-XXL</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>33.8</td>
-              <td>48.5</td>
-              <td>30.6</td>
-              <td>27.6</td>
-              <td>33.6</td>
-              <td>49.8</td>
-              <td>29.4</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://llava-vl.github.io/">
-                    <b>LLaVA-1.5-13B</b>
-                </a>
-              </td>
-              <td>13B</td>
-              <td>2023-11-27</td>
-              <td>33.6</td>
-              <td>49.8</td>
-              <td>28.2</td>
-              <td>25.9</td>
-              <td>34.9</td>
-              <td>54.7</td>
-              <td>28.3</td>
-            </tr>
-            <tr style="background-color: #f9f2f8;">
-              <td style="text-align: left;">
-                <a href="https://github.com/BAAI-DCAI/Bunny">
-                    <b>Bunny-3B*</b>
-                </a>
-              </td>
-              <td>3B</td>
-              <td>2024-02-13</td>
-              <td>33.0</td>
-              <td>44.3</td>
-              <td>29.5</td>
-              <td>26.8</td>
-              <td>34.5</td>
-              <td>50.5</td>
-              <td>28.7</td>
-            </tr>
-              <tr style="background-color: rgba(249,242,248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2308.12966">
-                    <b>Qwen-VL-7B-Chat</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>32.9</td>
-              <td>47.7</td>
-              <td>29.8</td>
-              <td>25.6</td>
-              <td>33.6</td>
-              <td>45.3</td>
-              <td>30.2</td>
-            </tr>
-            <tr style="background-color: rgba(249,242,248, 1);">
-            <td style="text-align: left;">
-              <a href="https://arxiv.org/abs/2311.07575">
-                <b>SPHINX*</b>
-              </a>
-            </td>
-            <td>-</td>
-            <td>2023-12-26</td>
-            <td>32.9</td>
-            <td>50.9</td>
-            <td>27.2</td>
-            <td>25.3</td>
-            <td>34.1</td>
-            <td>51.2</td>
-            <td>27.8</td>
-          </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2311.04257">
-                    <b>mPLUG-OWL2*</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-12-04</td>
-              <td>32.1</td>
-              <td>48.5</td>
-              <td>25.6</td>
-              <td>24.9</td>
-              <td>32.8</td>
-              <td>46.7</td>
-              <td>29.6</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2301.12597">
-                    <b>BLIP-2 FLAN-T5-XL</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>31.0</td>
-              <td>43.0</td>
-              <td>25.6</td>
-              <td>25.1</td>
-              <td>31.8</td>
-              <td>48.0</td>
-              <td>27.8</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2305.06500">
-                    <b>InstructBLIP-T5-XL</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>30.6</td>
-              <td>43.3</td>
-              <td>25.2</td>
-              <td>25.2</td>
-              <td>29.3</td>
-              <td>45.8</td>
-              <td>28.6</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2311.03079">
-                    <b>CogVLM</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>30.1</td>
-              <td>38.0</td>
-              <td>25.6</td>
-              <td>25.1</td>
-              <td>31.2</td>
-              <td>41.5</td>
-              <td>28.9</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2305.03726">
-                    <b>Otter</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>29.1</td>
-              <td>37.4</td>
-              <td>24.0</td>
-              <td>24.1</td>
-              <td>29.6</td>
-              <td>35.9</td>
-              <td>30.2</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2304.15010">
-                    <b>LLaMA-Adapter2-7B</b>
-                </a>
-              </td>
-              <td>7B</td>
-              <td>2023-11-27</td>
-              <td>27.7</td>
-              <td>35.2</td>
-              <td>25.4</td>
-              <td>25.6</td>
-              <td>30.0</td>
-              <td>29.1</td>
-              <td>25.7</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://minigpt-4.github.io/">
-                    <b>MiniGPT4-Vicuna-13B</b>
-                </a>
-              </td>
-              <td>13B</td>
-              <td>2023-11-27</td>
-              <td>27.6</td>
-              <td>30.2</td>
-              <td>27.0</td>
-              <td>26.2</td>
-              <td>26.9</td>
-              <td>30.9</td>
-              <td>27.2</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://www.adept.ai/blog/fuyu-8b">
-                    <b>Adept Fuyu-8B</b>
-                </a>
-              </td>
-              <td>8B</td>
-              <td>2023-11-27</td>
-              <td>27.4</td>
-              <td>29.9</td>
-              <td>27.0</td>
-              <td>25.6</td>
-              <td>27.0</td>
-              <td>32.5</td>
-              <td>26.4</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2306.14824">
-                    <b>Kosmos2</b>
-                </a>
-              </td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td>26.6</td>
-              <td>28.8</td>
-              <td>23.7</td>
-              <td>26.6</td>
-              <td>27.2</td>
-              <td>26.3</td>
-              <td>26.8</td>
-            </tr>
-              <tr style="background-color: rgba(249, 242, 248, 1);">
-              <td style="text-align: left;">
-                <a href="https://arxiv.org/abs/2308.01390">
-                    <b>OpenFlamingo2-9B</b>
-                </a>
-              </td>
-              <td>9B</td>
-              <td>2023-11-27</td>
-              <td>26.3</td>
-              <td>31.7</td>
-              <td>23.5</td>
-              <td>26.3</td>
-              <td>26.3</td>
-              <td>27.9</td>
-              <td>25.1</td>
-            </tr>
-            <tr style="background-color: #f4f9fe;">
-              <td style="color: #808080;text-align: left;">Frequent Choice</td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td style="color: #808080;">25.8</td>
-              <td style="color: #808080;">26.7</td>
-              <td style="color: #808080;">28.4</td>
-              <td style="color: #808080;">24.0</td>
-              <td style="color: #808080;">24.4</td>
-              <td style="color: #808080;">25.2</td>
-              <td style="color: #808080;">26.5</td>
-            </tr>
-            <tr style="background-color: #f4f9fe;">
-              <td style="color: #808080;text-align: left;">Random Choice</td>
-              <td>-</td>
-              <td>2023-11-27</td>
-              <td style="color: #808080;">23.9</td>
-              <td style="color: #808080;">24.1</td>
-              <td style="color: #808080;">24.9</td>
-              <td style="color: #808080;">21.6</td>
-              <td style="color: #808080;">25.3</td>
-              <td style="color: #808080;">22.8</td>
-              <td style="color: #808080;">24.8</td>
-            </tr>
-          </table>
-          
-            <p> Overall results of different models on the MMMU test set. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
-        </div>
-      </div>
-    </div>
-<!-------------------------------------------------------------------- Image Type SECTION -------------------------------------------------------------------->
-<div class="columns is-centered m-6">
-  <div class="column is-full has-text-centered content">
-    <h2 class="title is-3">Different Image Types</h2>
-    <div class="content has-text-justified">
-      <p>
-        We compare the performance of various models across top frequent image types.
-        Across all types, GPT-4V consistently outperforms the other models by a huge margin.
-        Open-source models demonstrate relatively strong performance in categories like Photos and Paintings, which are more frequently seen during training.
-        However, for less common image categories like Geometric shapes, Music sheets and Chemical structures, all models obtain very low scores (some are close to random guesses).
-        This indicates that the existing models are generalizing poorly towards these image types.
-      </p>
-    </div>
-    <div class="model-labels-container">
-      <span class="model-label" style="background-color: rgba(196, 123, 160, 0.5);">Adept Fuyu-8B</span>
-      <span class="model-label" style="background-color: rgba(245, 123, 113, 0.5);">Qwen-VL-7B-Chat</span>
-      <span class="model-label" style="background-color: rgba(255, 208, 80, 0.5);">LLaVA-1.5-13B</span>
-      <span class="model-label" style="background-color: rgba(110, 194, 134, 0.5);">InstructBLIP-T5-XXL</span>
-      <span class="model-label" style="background-color: rgba(255, 153, 78, 0.5);">BLIP-2 FLAN-T5-XXL</span>
-      <span class="model-label" style="background-color: rgba(42, 149, 235, 0.5);">Yi-VL-34B</span>
-      <span class="model-label" style="background-color: rgba(183, 156, 220, 0.5);">LLaVA-1.6-34B</span>
-      <span class="model-label" style="background-color: rgba(143, 169, 209, 0.5);">InternVL-Chat-V1.2</span>
-      <span class="model-label" style="background-color: rgba(72, 199, 176, 0.5);">VILA1.5</span>
-      <span class="model-label" style="background-color: rgba(117, 209, 215, 0.5);">GPT-4V</span>
-    </div>
-    <div class="content has-text-centered">
-      <div class="chart-grid">
-        <!-- Chart 1: Diagrams -->
-        <div class="chart-item">
-            <canvas id="chart_Diagrams"></canvas>
-            <p class="chart-label">Diagrams (3184)</p>
-        </div>
-        <!-- Chart 2: Tables -->
-        <div class="chart-item">
-            <canvas id="chart_Tables"></canvas>
-            <p class="chart-label">Tables (2267)</p>
-        </div>
-        <!-- Chart 3: Plots and Charts -->
-        <div class="chart-item">
-          <canvas id="chart_PlotsAndCharts"></canvas>
-          <p class="chart-label">Plots and Charts (840)</p>
-        </div>
-        <!-- Chart 4: Chemical Structures -->
-        <div class="chart-item">
-          <canvas id="chart_ChemicalStructures"></canvas>
-          <p class="chart-label">Chemical Structures (573)</p>
-        </div>
-        <!-- Chart 5: Photographs -->
-        <div class="chart-item">
-          <canvas id="chart_Photographs"></canvas>
-          <p class="chart-label">Photographs (770)</p>
-        </div>
-        <!-- Chart 6: Paintings -->
-        <div class="chart-item">
-          <canvas id="chart_Paintings"></canvas>
-          <p class="chart-label">Paintings (453)</p>
-        </div>
-        <!-- Chart 7: Geometric Shapes -->
-        <div class="chart-item">
-          <canvas id="chart_GeometricShapes"></canvas>
-          <p class="chart-label">Geometric Shapes (336)</p>
-        </div>
-        <!-- Chart 8: Sheet Music -->
-        <div class="chart-item">
-          <canvas id="chart_SheetMusic"></canvas>
-          <p class="chart-label">Sheet Music (335)</p>
-        </div>
-        <!-- Chart 9: Medical Images -->
-        <div class="chart-item">
-          <canvas id="chart_MedicalImages"></canvas>
-          <p class="chart-label">Medical Images (272)</p>
-        </div>
-        <!-- Chart 10: Pathological Images -->
-        <div class="chart-item">
-          <canvas id="chart_PathologicalImages"></canvas>
-          <p class="chart-label">Pathological Images (253)</p>
-        </div>
-        <!-- Chart 11: Microscopic Images -->
-        <div class="chart-item">
-          <canvas id="chart_MicroscopicImages"></canvas>
-          <p class="chart-label">Microscopic Images (226)</p>
-        </div>
-        <!-- Chart 12: MRI, CT scans, and X-rays -->
-        <div class="chart-item">
-          <canvas id="chart_MRIsCTScansXrays"></canvas>
-          <p class="chart-label">MRI, CT scans, and X-rays (198)</p>
-        </div>
-        <!-- Chart 13: Sketches and Drafts -->
-        <div class="chart-item">
-          <canvas id="chart_SketchesAndDrafts"></canvas>
-          <p class="chart-label">Sketches and Drafts (184)</p>
-        </div>
-        <!-- Chart 14: Maps -->
-        <div class="chart-item">
-          <canvas id="chart_Maps"></canvas>
-          <p class="chart-label">Maps (170)</p>
-        </div>
-        <!-- Chart 15: Technical Blueprints -->
-        <div class="chart-item">
-          <canvas id="chart_TechnicalBlueprints"></canvas>
-          <p class="chart-label">Technical Blueprints (162)</p>
-        </div>
-        <!-- Chart 16: Trees and Graphs -->
-        <div class="chart-item">
-          <canvas id="chart_TreesAndGraphs"></canvas>
-          <p class="chart-label">Trees and Graphs (146)</p>
-        </div>
-        <!-- Chart 17: Mathematical Notations -->
-        <div class="chart-item">
-          <canvas id="chart_MathematicalNotations"></canvas>
-          <p class="chart-label">Mathematical Notations (133)</p>
-        </div>
-        <!-- Chart 18: Comics and Cartoons -->
-        <div class="chart-item">
-          <canvas id="chart_ComicsAndCartoons"></canvas>
-          <p class="chart-label">Comics and Cartoons (131)</p>
-        </div>
-        <!-- Chart 19: Sculpture -->
-        <div class="chart-item">
-          <canvas id="chart_Sculpture"></canvas>
-          <p class="chart-label">Sculpture (117)</p>
-        </div>
-        <!-- Chart 20: Portraits -->
-        <div class="chart-item">
-          <canvas id="chart_Portraits"></canvas>
-          <p class="chart-label">Portraits (91)</p>
-        </div>
-        <!-- Chart 21: Screenshots -->
-        <div class="chart-item">
-          <canvas id="chart_Screenshots"></canvas>
-          <p class="chart-label">Screenshots (70)</p>
-        </div>
-        <!-- Chart 22: Other -->
-        <div class="chart-item">
-          <canvas id="chart_Other"></canvas>
-          <p class="chart-label">Other(60)</p>
-        </div>
-        <!-- Chart 23: Poster -->
-        <div class="chart-item">
-          <canvas id="chart_Poster"></canvas>
-          <p class="chart-label">Poster(57)</p>
-        </div>
-        <!-- Chart 24: Icons and Symbols -->
-        <div class="chart-item">
-          <canvas id="chart_IconsAndSymbols"></canvas>
-          <p class="chart-label">Icons and Symbols (42)</p>
-        </div>
-        <!-- Chart 25: Historical Timelines -->
-        <div class="chart-item">
-          <canvas id="chart_HistoricalTimelines"></canvas>
-          <p class="chart-label">Historical Timelines (30)</p>
-        </div>
-        <!-- Chart 26: 3D Renderings -->
-        <div class="chart-item">
-          <canvas id="chart_3DRenderings"></canvas>
-          <p class="chart-label">3D Renderings (21)</p>
-        </div>
-        <!-- Chart 27: DNA Sequences -->
-        <div class="chart-item">
-          <canvas id="chart_DNASequences"></canvas>
-          <p class="chart-label">DNA Sequences (20)</p>
-        </div>
-        <!-- Chart 28: Landscapes -->
-        <div class="chart-item">
-          <canvas id="chart_Landscapes"></canvas>
-          <p class="chart-label">Landscapes (16)</p>
-        </div>
-        <!-- Chart 29: Logos and Branding -->
-        <div class="chart-item">
-          <canvas id="chart_LogosAndBranding"></canvas>
-          <p class="chart-label">Logos and Branding(14)</p>
-        </div>
-        <!-- Chart 30: Advertisements -->
-        <div class="chart-item">
-          <canvas id="chart_Advertisements"></canvas>
-          <p class="chart-label">Advertisements (10)</p>
-        </div>
-      </div>
-      <p class="bottom-text"> Selected models' performance on 30 different image types. Note that a single image may have multiple image types.</p>
-    </div>
 
-  </div>
-</div>
+          
+            <p> Overall results of different models on the SIUO. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. Except for multiple-choice questions, all other results are based on manual evaluations.</p>
+        </div>
+      </div>
+    </div> 
+<!-------------------------------------------------------------------- Image Type SECTION -------------------------------------------------------------------->
+
 <!-------------------------------------------------------------------- Difficulty Levels SECTION -------------------------------------------------------------------->
-<div class="columns is-centered m-6">
+<!-- <div class="columns is-centered m-6">
   <div class="column is-full has-text-centered content">
-    <h2 class="title is-3">Different Difficulty Levels</h2>
+    <h2 class="title is-3">Different Domains Analysis</h2>
     <div class="content has-text-justified">
       <p>
         we compares the performance of selected models across three difficulty levels.
@@ -2104,24 +692,11 @@
       <p>Result decomposition across question difficulty levels.</p>
     </div>
   </div>
-</div>
+</div> -->
 <!-------------------------------------------------------------------- Single VS Multiple image SECTION -------------------------------------------------------------------->
-<div class="columns is-centered m-6">
-  <div class="column is-full has-text-centered content">
-    <h2 class="title is-3">Single Image VS Multiple Image</h2>
-    <div class="content has-text-justified">
-      <!-- <p>
-        We compare the performance of selected models across single image and multiple image tasks.
-      </p> -->
-    </div>
-    <div class="content has-text-centered">
-      <canvas id="single_vs_multiple_chart"></canvas>
-      <p>Result decomposition across single image and multiple image tasks.</p>
-    </div>
-  </div>
-</div>
+
 <!-------------------------------------------------------------------- Error Analysis SECTION -------------------------------------------------------------------->
-    <div class="columns is-centered m-6">
+    <!-- <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Error Analysis</h2>
         <div class="content has-text-justified">
@@ -2138,7 +713,7 @@
           <p> Error distribution over 150 annotated GPT-4V errors.</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
 <!-------------------------------------------------------------------- Error Example  -------------------------------------------------------------------->
 
@@ -2148,252 +723,12 @@
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/error/1.png" alt="grade-lv" width="60%"/>
+              <img src="static/images/error/case1-1.jpf" alt="grade-lv" width="60%"/>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/error/2.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/3.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/4.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/5.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/6.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/7.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/8.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/9.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/10.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/11.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/12.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/13.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <!-- <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/14.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div> -->
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/15.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/16.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/17.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/18.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/19.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/20.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/21.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/22.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/23.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/24.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/25.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/26.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/27.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/28.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/29.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/30.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/31.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/32.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/33.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/34.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/35.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/36.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/37.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/38.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/39.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/40.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/41.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/42.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/43.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/44.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/45.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/46.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/47.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/48.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/49.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/error/50.png" alt="grade-lv" width="60%"/>
+              <img src="static/images/error/case2-1.jpf" alt="grade-lv" width="60%"/>
             </div>
           </div>
         </div>
@@ -2401,7 +736,7 @@
     </div>
 <!-------------------------------------------------------------------- Correct Example -------------------------------------------------------------------->
 
-    <div class="columns is-centered m-6">
+    <!-- <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Correct Examples</h2>
         <div id="results-carousel" class="carousel results-carousel">
@@ -2465,11 +800,6 @@
               <img src="static/images/correct/12.png" alt="grade-lv" width="60%"/>
             </div>
           </div>
-          <!-- <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/correct/13.png" alt="grade-lv" width="60%"/>
-            </div>
-          </div> -->
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/correct/14.png" alt="grade-lv" width="60%"/>
@@ -2597,7 +927,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
 
 
