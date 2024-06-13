@@ -1,6 +1,6 @@
 # SIUO
 
-[**🌐 Homepage**](https://sinwang20.github.io/SIUO/) | [**🤗 Dataset**](https://huggingface.co/datasets/MMMU/MMMU/) | [**🤗 Paper**](https://huggingface.co/papers/2311.16502) | [**📖 arXiv**](https://arxiv.org/pdf/2311.16502.pdf) | [**GitHub**](https://github.com/sinwang20/SIUO)
+[**🌐 Homepage**](https://sinwang20.github.io/SIUO/) | [**🤗 Dataset**](https://sinwang20.github.io/SIUO/) | [**🤗 Paper**](https://sinwang20.github.io/SIUO/) | [**📖 arXiv**](https://sinwang20.github.io/SIUO/) | [**GitHub**](https://github.com/sinwang20/SIUO)
 
 
 This repo contains the evaluation code for the paper "[Cross-Modality Safety Alignment](https://arxiv.org/pdf/2311.16502.pdf)"
@@ -19,7 +19,7 @@ As Artificial General Intelligence (AGI) becomes increasingly integrated into va
 
 ## Dataset Creation
 
-SIUO was created to challenge LVLMs with tasks that demand college-level subject knowledge and deliberate reasoning, pushing the boundaries of what these models can achieve in terms of expert-level perception and reasoning. Please refer to our huggingface [**🤗 Dataset**](https://huggingface.co/datasets/MMMU/MMMU/) for more details.
+SIUO was created to challenge LVLMs with tasks that demand college-level subject knowledge and deliberate reasoning, pushing the boundaries of what these models can achieve in terms of expert-level perception and reasoning. Please refer to our huggingface [**🤗 Dataset**](https://sinwang20.github.io/SIUO/) for more details.
 
 
 ## Evaluation
@@ -39,14 +39,14 @@ TBD
 ## Citation
 
 **BibTeX:**
-```bibtex
+<!-- ```bibtex
 @inproceedings{yue2023mmmu,
   title={MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI},
   author={Xiang Yue and Yuansheng Ni and Kai Zhang and Tianyu Zheng and Ruoqi Liu and Ge Zhang and Samuel Stevens and Dongfu Jiang and Weiming Ren and Yuxuan Sun and Cong Wei and Botao Yu and Ruibin Yuan and Renliang Sun and Ming Yin and Boyuan Zheng and Zhenzhu Yang and Yibo Liu and Wenhao Huang and Huan Sun and Yu Su and Wenhu Chen},
   booktitle={Proceedings of CVPR},
   year={2024},
 }
-```
+``` -->
 
 <!-- # Website License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. -->
