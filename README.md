@@ -1,9 +1,9 @@
 # SIUO
 
-[**🌐 Homepage**](https://sinwang20.github.io/SIUO/) | [**🤗 Dataset**](https://sinwang20.github.io/SIUO/) | [**🤗 Paper**](https://sinwang20.github.io/SIUO/) | [**📖 arXiv**](https://sinwang20.github.io/SIUO/) | [**GitHub**](https://github.com/sinwang20/SIUO)
+[**🌐 Homepage**](https://sinwang20.github.io/SIUO/) |  [**📖 arXiv**](https://sinwang20.github.io/SIUO/) | [**GitHub**](https://github.com/sinwang20/SIUO)
 
 
-This repo contains the evaluation code for the paper "[Cross-Modality Safety Alignment](https://arxiv.org/pdf/2311.16502.pdf)"
+This repo contains the evaluation code for the paper "[Cross-Modality Safety Alignment](https://sinwang20.github.io/SIUO/)"
 
 
 ## 🔔News
@@ -17,36 +17,64 @@ As Artificial General Intelligence (AGI) becomes increasingly integrated into va
 ![Alt text](static/images/intro6.jpg)
 
 
-## Dataset Creation
+## 🧩 Dataset Creation
 
-SIUO was created to challenge LVLMs with tasks that demand college-level subject knowledge and deliberate reasoning, pushing the boundaries of what these models can achieve in terms of expert-level perception and reasoning. Please refer to our huggingface [**🤗 Dataset**](https://sinwang20.github.io/SIUO/) for more details.
-
-
-## Evaluation
-Please refer to our [eval](eval)
- folder for more details.
+SIUO was created to challenge LVLMs with tasks that demand college-level subject knowledge and deliberate reasoning, pushing the boundaries of what these models can achieve in terms of expert-level perception and reasoning. 
 
 
-## Contact
+### ✨ Dataset Examples
+
+<img src="static/images/example2.jpg" class="floatpic">
+
+
+### 🪜 Download
+You can find the example of generation task questions in `data/example_siuo_gen.json` and the example of multiple-choice questions in `data/example_siuo_mcqa.json`.
+
+
+
+## 🎯 Evaluation
+
+**SIUO** is a zero-shot evaluation benchmark. The model response generation process can be referred to in the following files: `generation—gpt4o-gen.py` and `generation-gpt4o-mcqa.py`.
+
+### 🤖 GPT-Eval
+
+1. Put your model's three responses as a list and add them under the "responses" field in `siuo_gen.json`, saved in `./eval/test_results/siuo_gen-{model_name}.json`.
+
+2. For the safety evaluation, run `python gpt-eval.py --model model_name --mode safe` to obtain `./eval/test_results/siuo_gen-{model_name}-gpteval-safe-pro.json`.
+
+    For the effectiveness evaluation, run `python gpt-eval.py --model model_name --mode effective` to obtain `./eval/test_results/siuo_gen-{model_name}-gpteval-effective-pro.json`.
+
+    Note: Before running the `gpt-eval.py` file, you need to add your OpenAI API key.
+
+3. Then run the file `python gpt-score.py`, which will merge the safe and effective files, calculate the values for safe, effective, and safe & effective scores. It will also statistically analyze the scores by category.
+
+### 🤹 Multiple-Choice QA
+
+1. Add the model response results under the "response_mcqa" field in `siuo_mcqa.json`, saved in `./eval/test_results/siuo_mcqa-{model_name}.json`.
+
+2. Then run the file `python mcqa-eval.py --model model_name` to match the model responses and calculate accuracy.
+
+
+
+## ✍️ Data Contribution
+
+Anyone is welcome to contribute test cases to our dataset by submitting them through the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd3qNg7j0BTlX71PJEgjstamWgh36oWKQIHQtJeCPJp3oFmgw/viewform?usp=sf_link). After a review by our team, we will incorporate the approved cases into the evaluation dataset. We greatly appreciate your participation in helping us advance cross-modality safety alignment, enabling a more comprehensive evaluation of these models.
+
+
+## 📬 Contact
 - Siyin Wang: siyinwang20@fudan.edu.cn
 - Xipeng Qiu: xpqiu@fudan.edu.cn
 
 
-## Papers citing(utilizing) SIUO
+## 👏 Papers citing(utilizing) SIUO
 
-TBD
+Welcome to cite/use our dataset to further advance cross-modality safety alignment.
 
-## Citation
+## 🔒 License
+![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg) **Usage and License Notices**: The dataset is intended and licensed for research use only. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models using the dataset should not be used outside of research purposes.
+
+
+## 👋 Citation
 
 **BibTeX:**
-<!-- ```bibtex
-@inproceedings{yue2023mmmu,
-  title={MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI},
-  author={Xiang Yue and Yuansheng Ni and Kai Zhang and Tianyu Zheng and Ruoqi Liu and Ge Zhang and Samuel Stevens and Dongfu Jiang and Weiming Ren and Yuxuan Sun and Cong Wei and Botao Yu and Ruibin Yuan and Renliang Sun and Ming Yin and Boyuan Zheng and Zhenzhu Yang and Yibo Liu and Wenhao Huang and Huan Sun and Yu Su and Wenhu Chen},
-  booktitle={Proceedings of CVPR},
-  year={2024},
-}
-``` -->
 
-<!-- # Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. -->
