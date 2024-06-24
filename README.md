@@ -1,9 +1,9 @@
 # SIUO
 
-[**🌐 Homepage**](https://sinwang20.github.io/SIUO/) |  [**📖 arXiv**](https://sinwang20.github.io/SIUO/) | [**GitHub**](https://github.com/sinwang20/SIUO)
+[**🌐 Homepage**](https://sinwang20.github.io/SIUO/) |  [**📖 arXiv**](https://arxiv.org/abs/2406.15279) | [**GitHub**](https://github.com/sinwang20/SIUO)
 
 
-This repo contains the evaluation code for the paper "[Cross-Modality Safety Alignment](https://sinwang20.github.io/SIUO/)"
+This repo contains the evaluation code for the paper "[Cross-Modality Safety Alignment](https://arxiv.org/abs/2406.15279)"
 
 
 ## 🔔News
