@@ -78,3 +78,15 @@ Welcome to cite/use our dataset to further advance cross-modality safety alignme
 
 **BibTeX:**
 
+```bibtex
+@article{wang2024cross,
+  title={Cross-Modality Safety Alignment},
+  author={Siyin Wang and Xingsong Ye and Qinyuan Cheng and Junwen Duan and Shimin Li and Jinlan Fu and Xipeng Qiu and Xuanjing Huang},
+  journal={arXiv preprint arXiv:2406.15279},
+  year={2024},
+  url={https://arxiv.org/abs/2406.15279},
+  archivePrefix={arXiv},
+  eprint={2406.15279},
+  primaryClass={cs.AI},
+}
+```
