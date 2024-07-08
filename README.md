@@ -1,6 +1,6 @@
 # SIUO
 
-[**🌐 Homepage**](https://sinwang20.github.io/SIUO/) |  [**📖 arXiv**](https://arxiv.org/abs/2406.15279) | [**GitHub**](https://github.com/sinwang20/SIUO)
+[**🌐 Homepage**](https://sinwang20.github.io/SIUO/) |  [**📖 arXiv**](https://arxiv.org/abs/2406.15279) | [**🤗 Paper**](https://huggingface.co/papers/2406.15279) | [**🤗 Dataset**](https://huggingface.co/datasets/sinwang/SIUO) | [**GitHub**](https://github.com/sinwang20/SIUO)
 
 
 This repo contains the evaluation code for the paper "[Cross-Modality Safety Alignment](https://arxiv.org/abs/2406.15279)"
@@ -28,7 +28,9 @@ SIUO was created to challenge LVLMs with tasks that demand college-level subject
 
 
 ### 🪜 Download
-You can find the example of generation task questions in `data/example_siuo_gen.json` and the example of multiple-choice questions in `data/example_siuo_mcqa.json`.
+You can find the generation task questions in `data/siuo_gen.json` and the multiple-choice questions in `data/siuo_mcqa.json`.
+
+Images can be downloaded from [Google Drive](https://drive.google.com/file/d/1U9CNRyMVlFRxMd8rT24SOQhK5G87-E2B/view?usp=sharing) or [Baidu Netdisk](https://pan.baidu.com/s/1AuFoOHjorGAjPu-4nrIL0Q?pwd=siuo)(code: `siuo`). You will obtain a zip file(`SIUO-images.zip`). Please unzip the images under `repo_root_dir/data/images`.
 
 
 
