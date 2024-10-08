@@ -25,7 +25,7 @@ args = parser.parse_args()
 
 
 # Set up logging configuration
-logging.basicConfig(filename=f'./gpt-eval/{args.model}/{args.mode}/log_file.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=f'./gpt_eval/{args.model}/{args.mode}/log_file.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 # Function to load data from a JSON file
