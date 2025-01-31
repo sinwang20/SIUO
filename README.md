@@ -7,7 +7,7 @@ This repo contains the evaluation code for the paper "[Cross-Modality Safety Ali
 
 
 ## 🔔News
-
+- **🎉[2025-01-24]: Our SIUO is accepted by NAACL 2025!
 - **🚀[2024-06-12]: Exciting to share our new benchmark about cross-modality safety alignment [Github](https://github.com/sinwang20/SIUO)!🌟**
 
 
